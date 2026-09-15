@@ -1,0 +1,354 @@
+/* =========================================================
+   DARK MODE — VitaCheck
+   ========================================================= */
+html[data-theme="dark"] {
+  --surface: #0a1115;
+  --surface-2: #111b20;
+  --dark: #edf6f4;
+  --light: #0a1115;
+  --muted: rgba(237, 246, 244, 0.64);
+  --line: rgba(237, 246, 244, 0.13);
+  --shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
+}
+
+html[data-theme="dark"] .site-header {
+  background: rgba(10, 17, 21, 0.88);
+}
+
+html[data-theme="dark"] .page-hero {
+  color: white;
+}
+
+html[data-theme="dark"] .page-hero .lead {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+html[data-theme="dark"] .page-hero .eyebrow {
+  color: white !important;
+}
+
+html[data-theme="dark"] .sidebar {
+  background: #071014;
+  color: white;
+}
+
+html[data-theme="dark"] .footer {
+  background: #071014;
+}
+
+html[data-theme="dark"] .btn-dark {
+  background: #edf6f4;
+  color: #071014;
+}
+
+/* HOME 2 — hero card must stay dark with light text in dark mode */
+html[data-theme="dark"] .page-home2 .hero > .container > .card {
+  background: linear-gradient(
+    135deg,
+    #071014,
+    color-mix(in srgb, #071014 78%, var(--primary))
+  ) !important;
+  color: #edf6f4 !important;
+}
+
+html[data-theme="dark"] .page-home2 .hero > .container > .card h1,
+html[data-theme="dark"] .page-home2 .hero > .container > .card h2,
+html[data-theme="dark"] .page-home2 .hero > .container > .card h3 {
+  color: #edf6f4 !important;
+}
+
+html[data-theme="dark"] .page-home2 .hero > .container > .card .lead {
+  color: rgba(237, 246, 244, 0.78) !important;
+}
+
+html[data-theme="dark"] .page-home2 .hero > .container > .card .eyebrow {
+  color: color-mix(in srgb, var(--primary) 70%, #edf6f4) !important;
+}
+
+html[data-theme="dark"] .page-home2 .hero > .container > .card .btn-outline {
+  border-color: rgba(237, 246, 244, 0.35);
+  color: #edf6f4;
+}
+
+html[data-theme="dark"] .page-home2 .hero > .container > .card .btn-outline:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: transparent;
+}
+
+/* Nav dropdown */
+html[data-theme="dark"] .nav-drop-menu {
+  background: var(--surface-2);
+}
+
+html[data-theme="dark"] .nav-drop-menu a {
+  color: var(--dark) !important;
+}
+
+/* Other dark surfaces */
+html[data-theme="dark"] .page-services main > .section:nth-of-type(4) {
+  background: #071014;
+  color: #edf6f4;
+}
+
+html[data-theme="dark"] .page-hero::before {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.26));
+}
+
+html[data-theme="dark"] .medical-float {
+  opacity: 0.3;
+}
+
+/* Mobile menu in dark mode */
+html[data-theme="dark"] .mobile-menu {
+  background: var(--surface-2);
+  border-top-color: var(--line);
+}
+
+html[data-theme="dark"] .mobile-menu > a {
+  color: var(--dark);
+}
+
+html[data-theme="dark"] .mobile-home-group a {
+  background: var(--surface);
+  border-color: var(--line);
+  color: var(--dark);
+}
+
+
+/* Dim overlays stay strong in dark mode */
+html[data-theme="dark"] .page-hero::before {
+  background: linear-gradient(
+    105deg,
+    rgba(0, 0, 0, 0.88) 0%,
+    rgba(0, 0, 0, 0.72) 45%,
+    rgba(0, 0, 0, 0.50) 100%
+  );
+}
+html[data-theme="dark"] .page-hero-login::before {
+  background: linear-gradient(
+    105deg,
+    rgba(0, 0, 0, 0.88) 0%,
+    rgba(0, 0, 0, 0.70) 50%,
+    rgba(0, 0, 0, 0.50) 100%
+  );
+}
+html[data-theme="dark"] .page-home1 .hero::after {
+  background: linear-gradient(
+    105deg,
+    rgba(10, 17, 21, 0.90) 0%,
+    rgba(10, 17, 21, 0.75) 50%,
+    rgba(10, 17, 21, 0.55) 100%
+  );
+}
+html[data-theme="dark"] .page-home2 .hero::after {
+  background: linear-gradient(
+    105deg,
+    rgba(0, 0, 0, 0.60) 0%,
+    rgba(0, 0, 0, 0.40) 100%
+  );
+}
+
+
+/* Login/Register form card readable in dark mode */
+html[data-theme="dark"] .page-hero-login .card {
+  background: var(--surface-2);
+  color: var(--dark);
+}
+html[data-theme="dark"] .page-hero-login .card label,
+html[data-theme="dark"] .page-hero-login .card input,
+html[data-theme="dark"] .page-hero-login .card a {
+  color: var(--dark);
+}
+html[data-theme="dark"] .page-hero-login .card input {
+  background: var(--surface);
+  border-color: var(--line);
+  color: var(--dark);
+}
+
+/* Home 1 — in dark mode use a dark dim so light text isn't needed;
+   keep original dark heading color highly contrasted with brighter overlay edge */
+html[data-theme="dark"] .page-home1 .hero::after {
+  background: linear-gradient(
+    105deg,
+    rgba(10, 17, 21, 0.92) 0%,
+    rgba(10, 17, 21, 0.82) 40%,
+    rgba(10, 17, 21, 0.60) 100%
+  );
+}
+html[data-theme="dark"] .page-home1 .hero h1 {
+  color: #edf6f4;
+  text-shadow: none;
+}
+html[data-theme="dark"] .page-home1 .hero .lead {
+  color: rgba(237, 246, 244, 0.82);
+}
+html[data-theme="dark"] .page-home1 .hero .eyebrow {
+  color: var(--primary);
+}
+
+
+/* Home 1 — dark mode: strong dark wash + light text */
+html[data-theme="dark"] .page-home1 .hero::after {
+  background: linear-gradient(
+    100deg,
+    rgba(10, 17, 21, 0.96) 0%,
+    rgba(10, 17, 21, 0.90) 40%,
+    rgba(10, 17, 21, 0.70) 100%
+  ) !important;
+}
+html[data-theme="dark"] .page-home1 .hero h1 {
+  color: #edf6f4 !important;
+  text-shadow: none;
+}
+html[data-theme="dark"] .page-home1 .hero .lead {
+  color: rgba(237, 246, 244, 0.90) !important;
+  text-shadow: none;
+}
+html[data-theme="dark"] .page-home1 .hero .eyebrow {
+  color: var(--primary) !important;
+}
+html[data-theme="dark"] .page-home1 .hero .btn-outline {
+  background: rgba(17, 27, 32, 0.85);
+  border-color: rgba(237, 246, 244, 0.28);
+  color: #edf6f4;
+}
+html[data-theme="dark"] .page-home1 .hero .btn-outline:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: rgba(17, 27, 32, 0.95);
+}
+html[data-theme="dark"] .page-home1 .hero .trust-row,
+html[data-theme="dark"] .page-home1 .hero .trust-item {
+  color: rgba(237, 246, 244, 0.88) !important;
+  text-shadow: none;
+}
+
+/* =========================================================
+   HOME 1 — dark-mode surface fix
+   Keep the existing HTML/layout unchanged; only correct light cards/boxes.
+   ========================================================= */
+html[data-theme="dark"] .page-home1 main .card,
+html[data-theme="dark"] .page-home1 .package-card,
+html[data-theme="dark"] .page-home1 .search-shell,
+html[data-theme="dark"] .page-home1 .floating-card {
+  background: linear-gradient(
+    145deg,
+    #111b20 0%,
+    color-mix(in srgb, var(--primary) 5%, #111b20) 100%
+  ) !important;
+  color: #edf6f4 !important;
+  border-color: rgba(237, 246, 244, 0.13) !important;
+}
+
+html[data-theme="dark"] .page-home1 main .card h2,
+html[data-theme="dark"] .page-home1 main .card h3,
+html[data-theme="dark"] .page-home1 .package-card h3,
+html[data-theme="dark"] .page-home1 .floating-card strong {
+  color: #edf6f4 !important;
+}
+
+html[data-theme="dark"] .page-home1 main .card .muted,
+html[data-theme="dark"] .page-home1 .package-card .package-meta,
+html[data-theme="dark"] .page-home1 .floating-card .muted {
+  color: rgba(237, 246, 244, 0.68) !important;
+}
+
+html[data-theme="dark"] .page-home1 .search-shell input,
+html[data-theme="dark"] .page-home1 .search-shell select {
+  background: #0a1115 !important;
+  color: #edf6f4 !important;
+  border-color: rgba(237, 246, 244, 0.13) !important;
+}
+
+html[data-theme="dark"] .page-home1 .search-shell input::placeholder {
+  color: rgba(237, 246, 244, 0.52) !important;
+}
+
+html[data-theme="dark"] .page-home1 main .card:hover,
+html[data-theme="dark"] .page-home1 .package-card:hover {
+  border-color: color-mix(in srgb, var(--primary) 50%, rgba(237, 246, 244, 0.13)) !important;
+}
+
+/* Home 1 — stats strip dark-mode correction */
+html[data-theme="dark"] .page-home1 .stats-strip {
+  background: #111b20 !important;
+  color: #edf6f4 !important;
+  border: 1px solid rgba(237, 246, 244, 0.12) !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.22);
+}
+
+html[data-theme="dark"] .page-home1 .stats-strip .stat strong {
+  color: #edf6f4 !important;
+}
+
+html[data-theme="dark"] .page-home1 .stats-strip .stat span {
+  color: rgba(237, 246, 244, 0.68) !important;
+}
+
+/* Home 2 — Quality assurance: keep copy readable in dark mode */
+html[data-theme="dark"] .page-home2 main > .section-sm:nth-of-type(6) .split > div:last-child,
+html[data-theme="dark"] .page-home2 main > .section-sm:nth-of-type(6) .split > div:last-child h2 {
+  color: #edf6f4 !important;
+}
+html[data-theme="dark"] .page-home2 main > .section-sm:nth-of-type(6) .split > div:last-child .lead {
+  color: rgba(237, 246, 244, 0.78) !important;
+}
+html[data-theme="dark"] .page-home2 main > .section-sm:nth-of-type(6) .split > div:last-child .eyebrow {
+  color: color-mix(in srgb, var(--primary) 72%, #edf6f4) !important;
+}
+
+/* Home 2 — Quality Assurance dark-mode visibility (definitive fix) */
+html[data-theme="dark"] body.page-home2 main > section:nth-of-type(6) .split > div:last-child,
+html[data-theme="dark"] body.page-home2 main > section:nth-of-type(6) .split > div:last-child h2,
+html[data-theme="dark"] body.page-home2 main > section:nth-of-type(6) .split > div:last-child h3,
+html[data-theme="dark"] body.page-home2 main > section:nth-of-type(6) .split > div:last-child p {
+  color: #edf6f4 !important;
+}
+html[data-theme="dark"] body.page-home2 main > section:nth-of-type(6) .split > div:last-child .lead {
+  color: rgba(237, 246, 244, 0.82) !important;
+}
+html[data-theme="dark"] body.page-home2 main > section:nth-of-type(6) .split > div:last-child .eyebrow {
+  color: #55d6c2 !important;
+}
+
+/* Home 2 — Quality Assurance stats strip: dark-mode contrast fix only */
+html[data-theme="dark"] body.page-home2 .stats-strip {
+  background: #101b1d !important;
+  color: #edf6f4 !important;
+  border: 1px solid rgba(237, 246, 244, 0.12) !important;
+}
+html[data-theme="dark"] body.page-home2 .stats-strip .stat strong {
+  color: #edf6f4 !important;
+}
+html[data-theme="dark"] body.page-home2 .stats-strip .stat span {
+  color: rgba(237, 246, 244, 0.72) !important;
+}
+
+
+/* Requested Home 1 hero contrast: make the existing overlay cover the full hero in dark mode. */
+html[data-theme="dark"] .page-home1 .hero::after {
+  inset: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  transform: none !important;
+  background: linear-gradient(90deg, rgba(5,12,16,.82) 0%, rgba(5,12,16,.64) 45%, rgba(5,12,16,.24) 74%) !important;
+  z-index: 1 !important;
+}
+html[data-theme="dark"] .page-home1 .hero > .container,
+html[data-theme="dark"] .page-home1 .hero .medical-motif {
+  position: relative;
+  z-index: 2;
+}
+html[data-theme="dark"] .page-home1 .hero h1,
+html[data-theme="dark"] .page-home1 .hero .lead,
+html[data-theme="dark"] .page-home1 .hero .trust-item {
+  text-shadow: 0 2px 12px rgba(0,0,0,.35) !important;
+}
+@media (max-width: 860px) {
+  html[data-theme="dark"] .page-home1 .hero::after {
+    background: rgba(5,12,16,.68) !important;
+  }
+}
